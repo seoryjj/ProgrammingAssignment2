@@ -1,8 +1,3 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
-
 # makeCacheMatrix function : 
 # creates a special "square matrix", which is really a list containing a function to
 # set : set the matrix 
@@ -61,14 +56,23 @@ cacheSolve <- function(x, s) {
 }
 
 ######### R exceute sample code #########
-# > x <- matrix(1:4, nrow=2)
-# > s <- makeCacheMatrix(x)
-# > cacheSolve(x, s)
+#R > x <- matrix(1:4, nrow=2)
+# x
+#      [,1] [,2]
+# [1,]    1    3
+# [2,]    2    4
+#R > s <- makeCacheMatrix(x)
+#R > cacheSolve(x, s)
 #      [,1] [,2]
 # [1,]   -2  1.5
 # [2,]    1 -0.5
-# > cacheSolve(x, s)
+#R > cacheSolve(x, s)
 # getting cached matrix
 #      [,1] [,2]
 # [1,]   -2  1.5
 # [2,]    1 -0.5
+#R > x %*% cacheSolve(x, s)
+# getting cached matrix
+#     [,1] [,2]
+# [1,]    1    0
+# [2,]    0    1
